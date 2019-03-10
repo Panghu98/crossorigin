@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+</head>
+<body>
+<input type="button" value="测试" onclick="ajaxloding()" />
+<div id="usermessage"></div>
+<script>
+    var getdata=0;
+    function ajaxloding(){
+        $.ajax({
+            async:false,
+            type:"get",
+            url:"http://localhost:8080/api/findById?id=1",
+            contentType: "application/x-www-form-urlencoded",
+            dataType: "json",
+            data: {},
+            success:function(result){
+                getdata=result.name
+            },
+            error: function (errorMsg) {
+                //请求失败时执行该函数
+                alert("请求数据失败!");
+            }
+        });
+        $("#usermessage").text(getdata)
+    }
+</script>
+</body>
+</html>
