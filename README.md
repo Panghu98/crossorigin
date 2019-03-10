@@ -1,6 +1,6 @@
 JPA+lombok+CrossOrigin
 ---
-##关于JPA
+## 关于JPA
 * JPA（Java Persistence API)是SUN官方推出的Java持久化规范
 * 这里需要一个自定义一个Repository继承JpaRepository
 ```java
@@ -55,9 +55,9 @@ public interface JpaRepository<T, ID> extends PagingAndSortingRepository<T, ID>,
     用于方法，可以锁定指定的对象，如果不指定，则默认创建一个对象锁定
  ## 关于跨域问题
  参考学习博客 [跨域问题产生的原因](https://segmentfault.com/a/1190000015597029)
- <br>官网 [CND](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_request_headers)
+ <br>官网 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_request_headers)
  <br>这里可以去了解同源策略，CSRF攻击（跨站请求伪造）和Jsonp
-  <br>解决方案 [使用@CrossOrigin决绝CORS跨域]()
+  <br>解决方案 [使用@CrossOrigin决绝CORS跨域](https://blog.csdn.net/w_linux/article/details/81142413)
   <br>@CrossOrigin源码
 ```java
 @Target({ ElementType.METHOD, ElementType.TYPE })
@@ -122,7 +122,7 @@ public @interface CrossOrigin {
 对于这个注解是不配参数的，但是有时候跨域需要参数配置，而且跨域默认为*，这个是不安全的
 ```
 * 前端代码<br>
-[demo.html](/home/panghu/IdeaProjects/springboot_test/src/main/resources/templates/demo.html)
+[demo.html](https://github.com/Panghu98/JPA-lombok-CrossOrigin/src/main/resources/templates/demo.html)
 
 ### 简单跨域问题和复杂跨域问题
 #### 普通请求
@@ -133,4 +133,4 @@ public @interface CrossOrigin {
 <br>解决方案： 设置与请求处理
 * 方案一：在springsecurity中的webSecurityConfig类中配置Options请求
 * 在JWT的Filter中设置与请求处理
-相关的处理见GitHub[项目模板]()
+相关的处理见GitHub[项目模板](https://github.com/Panghu98/springboot-sample/tree/master/src/main/java/com/example/demo/)
