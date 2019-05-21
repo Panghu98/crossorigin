@@ -53,7 +53,7 @@ public interface JpaRepository<T, ID> extends PagingAndSortingRepository<T, ID>,
     对象为类，在类方法中直接调用log.XXX即可记录日志
     * @Synchronized <br>
     用于方法，可以锁定指定的对象，如果不指定，则默认创建一个对象锁定
- ## 关于跨域问题
+ ## 关于跨域问题（切忌不要在代码和服务器两端同时设置跨域解决方案）
  参考学习博客 [跨域问题产生的原因](https://segmentfault.com/a/1190000015597029)
  <br>官网 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_request_headers)
  <br>这里可以去了解同源策略，CSRF攻击（跨站请求伪造）和Jsonp
