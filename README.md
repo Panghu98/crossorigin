@@ -127,6 +127,7 @@ public @interface CrossOrigin {
 ### 简单跨域问题和复杂跨域问题
 #### 普通请求
 设置Access-Control-Allow-Origin: *就可以了（该属性@CrossOrigin注解中默认设置为 *）
+#### 如果是前端代码设置credentials为true的话Access-Control-Allow-Origin: *是不允许的
 #### 复杂请求 preflighted request
 在发送真正的请求前, 会先发送一个方法为OPTIONS的预请求(preflight request), 用于试探服务端是否能接受真正的请求.
 <br> 如果options获得的回应是拒绝性质的，比如404\403\500等http状态，就会停止post、put等请求的发出。
