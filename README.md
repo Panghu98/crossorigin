@@ -135,3 +135,6 @@ public @interface CrossOrigin {
 * 方案一：在springsecurity中的webSecurityConfig类中配置Options请求
 * 在JWT的Filter中设置与请求处理
 相关的处理见GitHub[项目模板](https://github.com/Panghu98/springboot-sample/tree/master/src/main/java/com/example/demo/)
+
+
+个人相关博客https://www.jianshu.com/p/b610299c0977
